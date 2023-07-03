@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="icon" type="image/png" href="https://is5-ssl.mzstatic.com/image/thumb/Purple114/v4/10/77/39/10773986-4e71-ef16-8895-0deb59b7e517/source/256x256bb.jpg">
+    <meta charset="UTF-8">
+    <title>KEUANGAN H&Z</title>
+    <link rel="stylesheet" href="style.css">
+   </head>
+<body>
+  <div class="buttons">
+    <a href="pemasukan/index.html" class="button">PEMASUKAN</a>
+    <a class="button two" href="penarikan/index.html">PENARIKAN</a>
+  </div>
+  <script>
+  // Ripple Effect JavaScript Code
+  let buttons = document.querySelectorAll(".a");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", (e)=>{
+      e.preventDefault(); // preventing form submitting
+      let overlay = document.createElement('span'); //creating a tag(span)
+      overlay.classList.add("overlay"); //adding a class inside the span
+      e.target.appendChild(overlay); //adding overlay tag inside the anchor tag at in HTML
+      let xValue = e.clientX - e.target.offsetLeft; //by this we get perfect value where we will click
+      let yValue = e.clientY - e.target.offsetTop; //by this we get perfect value where we will click
+       overlay.style.left = xValue + "px"; //changing the position of the overlay according to our clicks on the button
+       overlay.style.top = yValue + "px"; //changing the position of the overlay according to our clicks on the button
+  });
+  }
+  </script>
+  <footer class="footer">
+    <div class="container">
+        <p class="footer-text">INPUT PEMBUKUAN KEUANGAN HUGO & ZALFA</p>
+    </div>
+</footer>
+<style>
+  .footer {
+background-color: #ffffff;
+color: #000000;
+text-align: center;
+padding: 12px;
+position: fixed;
+bottom: 0;
+width: 100%;
+border-top: 1px solid #fff;
+box-sizing: border-box;
+}
+
+.footer .container {
+max-width: 500px;
+margin: 0 auto;
+}
+
+.footer-text {
+font-size: 16px;
+margin: 0;
+font-weight: bold;
+font-family: 'Google Sans Mono', monospace;
+}
+</style>
+</body>
+</html>
